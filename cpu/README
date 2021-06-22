@@ -1,0 +1,19 @@
+
+
+# to run mpstat:
+sudo apt install sysstat
+
+# to run cpu perf:
+sudo apt install linux-tools-common 
+
+
+
+top.sh:
+# ./top.sh ./logs/filename
+top -n 120 -d 1 -b > $1.log
+top.py:
+python3 top.py ./logs/filename.log
+
+COMBINE:
+./cpuPerf.sh <filename without extension log>
+
